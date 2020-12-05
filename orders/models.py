@@ -9,16 +9,14 @@ class Shop(models.Model):
 
 
 class Customer(models.Model):
-    customer_id = models.PositiveBigIntegerField(
-        'Customer ID', primary_key=True)
-    is_vip = models.BooleanField(default=False)
+    customer_id = models.AutoField('Customer ID', primary_key=True)
 
     def __str__(self):
-        return f'Customer {self.customer_id}/{self.is_vip}'
+        return f'Customer {self.customer_id}'
 
 
 class Product(models.Model):
-    product_id = models.PositiveBigIntegerField('Product ID', primary_key=True)
+    product_id = models.AutoField('Product ID', primary_key=True)
     stock_pcs = models.IntegerField('Stock PCS')
     price = models.IntegerField('Price')
     shop_id = models.ForeignKey(Shop, on_delete=models.PROTECT)
@@ -29,7 +27,7 @@ class Product(models.Model):
 
 
 class Order(models.Model):
-    order_id = models.PositiveBigIntegerField('Order ID', primary_key=True)
+    order_id = models.AutoField('Order ID', primary_key=True)
     product_id = models.ForeignKey(Product, on_delete=models.PROTECT)
     qty = models.IntegerField('Quantity')
     price = models.IntegerField('Price')
