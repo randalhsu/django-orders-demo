@@ -5,14 +5,14 @@ class Shop(models.Model):
     shop_id = models.TextField(primary_key=True)
 
     def __str__(self):
-        return f'Shop {self.shop_id}'
+        return f'{self.shop_id}'
 
 
 class Customer(models.Model):
     customer_id = models.AutoField('Customer ID', primary_key=True)
 
     def __str__(self):
-        return f'Customer {self.customer_id}'
+        return f'{self.customer_id}'
 
 
 class Product(models.Model):
@@ -23,7 +23,7 @@ class Product(models.Model):
     vip = models.BooleanField()
 
     def __str__(self):
-        return f'Product {self.product_id}/{self.stock_pcs}/{self.price}/{self.shop_id}/{self.vip}'
+        return f'{self.product_id}'
 
 
 class Order(models.Model):
@@ -35,4 +35,4 @@ class Order(models.Model):
     customer_id = models.ForeignKey(Customer, on_delete=models.PROTECT)
 
     def __str__(self):
-        return f'Order {self.order_id}/{self.product_id}/{self.qty}/{self.price}/{self.shop_id}/{self.customer_id}'
+        return f'{self.order_id}'
