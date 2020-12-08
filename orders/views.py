@@ -74,7 +74,8 @@ def add_order(request):
         if request.is_stock_pcs_enough and request.has_passed_vip_check:
             try:
                 product = Product.objects.get(product_id=product_id)
-                customer = Customer.objects.get(customer_id=customer_id)
+                customer = Customer.objects.get_or_create(
+                    customer_id=customer_id)[0]
                 order_data = {
                     'product_id': product,
                     'qty': qty,
@@ -137,3 +138,22 @@ def get_top_3_products(request):
         data[i] = product
     # print(data)
     return JsonResponse(data)
+
+
+def get_shop_statistics(request):
+    shops = {}
+    for order in Order.objects.all():
+        shop_id = str(order.shop_id)
+        if shop_id in shops:
+            shop = shops[shop_id]
+            shop['total_dollars'] += order.price
+            shop['total_sold_items'] += order.qty
+            shop['order_count'] += 1
+        else:
+            shops[shop_id] = {
+                'total_dollars': order.price,
+                'total_sold_items': order.qty,
+                'order_count': 1,
+            }
+    # print(shops)
+    return JsonResponse(shops)
