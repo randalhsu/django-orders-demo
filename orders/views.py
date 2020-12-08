@@ -66,7 +66,7 @@ def stock_pcs_enough_check(view_function=None):
 def add_order(request):
     form = AddNewOrderForm(request.POST)
     if form.is_valid():
-        print(form.cleaned_data)
+        # print(form.cleaned_data)
         product_id = form.cleaned_data['product_id']
         customer_id = form.cleaned_data['customer_id']
         qty = form.cleaned_data['qty']
@@ -84,7 +84,7 @@ def add_order(request):
                     'customer_id': customer,
                 }
                 order = Order.objects.create(**order_data)
-                print(order)
+                # print(order)
                 product.stock_pcs -= qty
                 product.save()
                 messages.info(request, 'Added a new order!')

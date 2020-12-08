@@ -1,0 +1,304 @@
+[
+  {
+    "model": "orders.shop",
+    "pk": "ms",
+    "fields": {}
+  },
+  {
+    "model": "orders.shop",
+    "pk": "ps",
+    "fields": {}
+  },
+  {
+    "model": "orders.shop",
+    "pk": "um",
+    "fields": {}
+  },
+  {
+    "model": "orders.customer",
+    "pk": 1,
+    "fields": {}
+  },
+  {
+    "model": "orders.customer",
+    "pk": 2,
+    "fields": {}
+  },
+  {
+    "model": "orders.product",
+    "pk": 1,
+    "fields": {
+      "stock_pcs": 7,
+      "price": 200,
+      "shop_id": "ps",
+      "vip": true
+    }
+  },
+  {
+    "model": "orders.product",
+    "pk": 2,
+    "fields": {
+      "stock_pcs": 3,
+      "price": 160,
+      "shop_id": "ms",
+      "vip": false
+    }
+  },
+  {
+    "model": "orders.product",
+    "pk": 3,
+    "fields": {
+      "stock_pcs": 2,
+      "price": 100,
+      "shop_id": "um",
+      "vip": false
+    }
+  },
+  {
+    "model": "orders.product",
+    "pk": 4,
+    "fields": {
+      "stock_pcs": 9,
+      "price": 500,
+      "shop_id": "um",
+      "vip": true
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+      "product_id": 1,
+      "qty": 2,
+      "price": 200,
+      "shop_id": "ps",
+      "customer_id": 1
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 2,
+    "fields": {
+      "product_id": 3,
+      "qty": 1,
+      "price": 100,
+      "shop_id": "um",
+      "customer_id": 2
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$216000$LG2XrY2YBfNe$MF7THenAGzrMgG5l2vzfRHnUrFB3hEmGcS2Vc7B28VI=",
+      "last_login": "2020-12-08T07:11:36.723Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "a@net.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-12-08T07:11:17.801Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2020-12-08T07:12:05.163Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "shop"
+      ],
+      "object_id": "ps",
+      "object_repr": "ps",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2020-12-08T07:12:07.782Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "shop"
+      ],
+      "object_id": "ms",
+      "object_repr": "ms",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2020-12-08T07:12:10.751Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "shop"
+      ],
+      "object_id": "um",
+      "object_repr": "um",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2020-12-08T07:12:33.043Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "product"
+      ],
+      "object_id": "1",
+      "object_repr": "1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2020-12-08T07:12:42.153Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "product"
+      ],
+      "object_id": "2",
+      "object_repr": "2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2020-12-08T07:12:50.292Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "product"
+      ],
+      "object_id": "3",
+      "object_repr": "3",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2020-12-08T07:13:08.432Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "product"
+      ],
+      "object_id": "4",
+      "object_repr": "4",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2020-12-08T07:14:02.123Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "customer"
+      ],
+      "object_id": "1",
+      "object_repr": "1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2020-12-08T07:14:04.543Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "order"
+      ],
+      "object_id": "1",
+      "object_repr": "1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2020-12-08T07:14:22.472Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "customer"
+      ],
+      "object_id": "2",
+      "object_repr": "2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2020-12-08T07:14:23.783Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "orders",
+        "order"
+      ],
+      "object_id": "2",
+      "object_repr": "2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  }
+]
