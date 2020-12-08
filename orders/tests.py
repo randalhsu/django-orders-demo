@@ -25,10 +25,7 @@ class ProductTest(TestCase):
 
     def has_target_message_in_messages(self, response, target_message):
         messages = list(get_messages(response.wsgi_request))
-        for message in messages:
-            if str(message) == target_message:
-                return True
-        return False
+        return target_message in map(str, messages)
 
     def test_add_order(self):
         self.assertEqual(Order.objects.all().count(), 2)
